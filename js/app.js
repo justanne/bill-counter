@@ -13,15 +13,15 @@ new Vue({
         st5: 0,
         st1: 0,
         total: 0,
-        v1000: 0,
-        v500: 0,
-        v200: 0,
-        v100: 0,
-        v50: 0,
-        v20: 0,
-        v10: 0,
-        v5: 0,
-        v1: 0,
+        v1000: null,
+        v500: null,
+        v200: null,
+        v100: null,
+        v50: null,
+        v20: null,
+        v10: null,
+        v5: null,
+        v1: null,
     },
 
     watch: {
@@ -32,8 +32,6 @@ new Vue({
     },
     methods: {
         updateSubTotal(d) {
-            // let subtotal = n * d
-
             switch (d) {
                 case 1000:
                     this.st1000 = d * this.v1000
@@ -71,6 +69,10 @@ new Vue({
             this.total = this.st1000 + this.st500 + this.st200 + this.st100 + this.st50 + this.st20 + this.st10 + this.st5 + this.st1
             this.total = this.total.toLocaleString('en',{maximumSignificantDigits : 12})
             console.log(this.total)
+        },
+        resetValues() {
+            this.v1000 = this.v500 = this.v200 = this.v100 = this.v50 = this.v20 = this.v10 = this.v5 = this.v1 = null
+            this.st1000 = this.st500 = this.st200 = this.st100 = this.st50 = this.st20 = this.st10 = this.st5 = this.st1 = 0
         },
     },
 })

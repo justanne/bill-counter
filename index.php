@@ -12,7 +12,7 @@
 <body>
     <div id="app">
         <div class="flex p-10">
-            <div class="w-1/2 mr-5">
+            <div class="w-full mr-5">
                 <!-- <h2 class="mb-5">Denomination</h2> -->
                 <div class="flex text-list-header">
                     <div class="w-1/2"><h2>Denomination</h2></div>
@@ -80,6 +80,9 @@
                     <div class="w-1/2 pl-20">{{ total }}</div>
                 </div>
             </div>
+        </div>
+        <div class="flex px-10">
+            <button class="btn px-3 py-1" @click="resetValues">Clear</button>
         </div>
     </div>
 
