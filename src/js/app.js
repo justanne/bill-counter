@@ -1,4 +1,4 @@
-// console.log = function () { }
+console.log = function () { }
 
 new Vue({
     el: '#app',
@@ -24,14 +24,7 @@ new Vue({
         v1: null,
     },
 
-    watch: {
-        // v1000: function (n, o) {
-        //     let d = 1000
-        //     console.log(typeof n)
-            // if(typeof n )
-            // (typeof n === 'number') ? this.updateSubTotal(n, d) : false
-        // },
-    },
+
     methods: {
         updateSubTotal(d) {
             switch (d) {

@@ -5,7 +5,7 @@ body {
 }
 
 body {
-  background: #efefef;
+  background: #fefefe;
   font-size: 1em;
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -39,5 +39,33 @@ button.btn-primary {
 button.btn-default {
   color: #333;
   background: #aaa;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    color: #b5bde4;
+    background: #25293D;
+  }
+
+  .text-list,
+  .text-list-header {
+    border-color: #3b4161;
+  }
+
+  .text-list:hover,
+  .text-list-header:hover {
+    background: #5a5f7a;
+  }
+
+  .text-list input,
+  .text-list-header input {
+    color: #25293D;
+    border-color: #12141d;
+  }
+
+  .text-list input:focus,
+  .text-list-header input:focus {
+    outline-color: #006eff;
+  }
 }
 

@@ -115,7 +115,8 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// console.log = function () { }
+console.log = function () {};
+
 new Vue({
   el: '#app',
   data: {
@@ -138,13 +139,6 @@ new Vue({
     v10: null,
     v5: null,
     v1: null
-  },
-  watch: {// v1000: function (n, o) {
-    //     let d = 1000
-    //     console.log(typeof n)
-    // if(typeof n )
-    // (typeof n === 'number') ? this.updateSubTotal(n, d) : false
-    // },
   },
   methods: {
     updateSubTotal: function updateSubTotal(d) {

@@ -1,0 +1,24 @@
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        color: #b5bde4;
+        background: #25293D;
+    }
+    .text-list,
+    .text-list-header {
+        border-color: #3b4161;
+
+        &:hover {
+            background: #5a5f7a;
+        }
+        input {
+            color: #25293D;
+            border-color: #12141d;
+        }
+        input:focus {
+            outline-color: #006eff;
+        }
+    }
+    button {
+        &.btn-primary {}
+    }
+}
