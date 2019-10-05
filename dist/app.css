@@ -1,0 +1,43 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #efefef;
+  font-size: 1em;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.text-list,
+.text-list-header {
+  padding: 0.5em;
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.text-list:hover {
+  background: #abf4f7;
+}
+
+.text-list input {
+  width: 30%;
+  border: 1px solid #ddd;
+}
+
+.text-list input:focus {
+  outline: 2px solid #20d3d9;
+  /* box-shadow: 0px 0px 2px #46c9ce; */
+}
+
+button.btn-primary {
+  color: #9e2a00;
+  background: orange;
+}
+
+button.btn-default {
+  color: #333;
+  background: #aaa;
+}
+

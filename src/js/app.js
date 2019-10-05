@@ -1,4 +1,4 @@
-console.log = function () { }
+// console.log = function () { }
 
 new Vue({
     el: '#app',
@@ -25,10 +25,12 @@ new Vue({
     },
 
     watch: {
-        v1000: function (n, o) {
-            let d = 1000
-            this.updateSubTotal(n, d)
-        },
+        // v1000: function (n, o) {
+        //     let d = 1000
+        //     console.log(typeof n)
+            // if(typeof n )
+            // (typeof n === 'number') ? this.updateSubTotal(n, d) : false
+        // },
     },
     methods: {
         updateSubTotal(d) {
@@ -41,7 +43,6 @@ new Vue({
                     break
                 case 200:
                     this.st200 = d * this.v200
-
                     break
                 case 100:
                     this.st100 = d * this.v100
@@ -73,6 +74,10 @@ new Vue({
         resetValues() {
             this.v1000 = this.v500 = this.v200 = this.v100 = this.v50 = this.v20 = this.v10 = this.v5 = this.v1 = null
             this.st1000 = this.st500 = this.st200 = this.st100 = this.st50 = this.st20 = this.st10 = this.st5 = this.st1 = 0
+            this.total = 0
+        },
+        printCounts() {
+            return window.print()
         },
     },
 })
