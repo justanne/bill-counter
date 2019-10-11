@@ -115,8 +115,11 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-console.log = function () {};
-
+// Vue.config.devtools      = false
+// Vue.config.productionTip = false
+// Vue.config.silent        = true
+// Vue.config.debug         = false
+// console.log = function () { }
 new Vue({
   el: '#app',
   data: {
@@ -138,9 +141,14 @@ new Vue({
     v20: null,
     v10: null,
     v5: null,
-    v1: null
+    v1: null,
+    billname: '',
+    billname2: ''
   },
   methods: {
+    addBillName: function addBillName() {
+      this.billname2 = this.billname;
+    },
     updateSubTotal: function updateSubTotal(d) {
       switch (d) {
         case 1000:

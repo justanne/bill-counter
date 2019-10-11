@@ -12,6 +12,16 @@
 </head>
 <body>
     <div id="app">
+        <div class="flex flex-wrap px-10 py-5">
+            <div class="flex w-full mr-5" v-if="!billname2">
+                <div class="w-1/4">Name</div>
+                <div class="w-1/4"><input class="w-full" type="text" name="" v-model="billname"></div>
+                <div class="w-1/4 ml-5"><button class="btn btn-default px-2" @click="addBillName">Set</button></div>
+            </div>
+            <div class="flex w-full">
+                <h1 class="text-xl text-white uppercase" v-text="billname2"></h1>
+            </div>
+        </div>
         <div class="flex p-10">
             <div class="w-full mr-5">
                 <!-- <h2 class="mb-5">Denomination</h2> -->
@@ -87,7 +97,7 @@
         </div>
     </div>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script> -->
 <script type="text/javascript" src="dist/app.js"></script>
 </body>
