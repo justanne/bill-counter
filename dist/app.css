@@ -10,6 +10,15 @@ body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
+input {
+  color: #25293D;
+}
+
+input:focus,
+button:focus {
+  outline: 2px solid #20d3d9;
+}
+
 .text-list,
 .text-list-header {
   padding: 0.5em;
@@ -17,18 +26,18 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
-.text-list:hover {
+.text-list:hover,
+.text-list-header:hover {
   background: #abf4f7;
+}
+
+.text-list-header:hover {
+  background: none;
 }
 
 .text-list input {
   width: 30%;
   border: 1px solid #ddd;
-}
-
-.text-list input:focus {
-  outline: 2px solid #20d3d9;
-  /* box-shadow: 0px 0px 2px #46c9ce; */
 }
 
 button.btn-primary {
@@ -47,6 +56,15 @@ button.btn-default {
     background: #25293D;
   }
 
+  input {
+    color: #25293D;
+    border-color: #12141d;
+  }
+
+  input:focus {
+    outline-color: #239adf;
+  }
+
   .text-list,
   .text-list-header {
     border-color: #3b4161;
@@ -57,15 +75,8 @@ button.btn-default {
     background: #5a5f7a;
   }
 
-  .text-list input,
-  .text-list-header input {
-    color: #25293D;
-    border-color: #12141d;
-  }
-
-  .text-list input:focus,
-  .text-list-header input:focus {
-    outline-color: #006eff;
+  .text-list-header:hover {
+    background: none;
   }
 }
 

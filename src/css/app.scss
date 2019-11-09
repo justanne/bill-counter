@@ -7,23 +7,29 @@ body {
     font-size: 1em;
     font-family: 'Source Sans Pro', sans-serif;
 }
-
+input {
+    color: #25293D;
+}
+input:focus,
+button:focus {
+    outline: 2px solid hsl(182, 74%, 49%);
+}
 .text-list,
 .text-list-header {
     padding: 0.5em;
     margin: 0;
     border-bottom: 1px solid #ccc;
+
+    &:hover {
+        background: #abf4f7;
+    }
 }
-.text-list:hover {
-    background: #abf4f7;
+.text-list-header:hover {
+    background: none;
 }
 .text-list input {
     width: 30%;
     border: 1px solid #ddd;
-}
-.text-list input:focus {
-    outline: 2px solid hsl(182, 74%, 49%);
-    /* box-shadow: 0px 0px 2px #46c9ce; */
 }
 button.btn-primary {
     color: rgb(158, 42, 0);

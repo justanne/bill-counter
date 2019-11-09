@@ -15,7 +15,7 @@
         <div class="flex flex-wrap px-10 py-5">
             <div class="flex w-full mr-5" v-if="!billname2">
                 <div class="w-1/4">Name</div>
-                <div class="w-1/4"><input class="w-full" type="text" name="" v-model="billname"></div>
+                <div class="w-1/4"><input class="w-full" type="text" v-model.trim="billname" maxlength="20" autofocus></div>
                 <div class="w-1/4 ml-5"><button class="btn btn-default px-2" @click="addBillName">Set</button></div>
             </div>
             <div class="flex w-full">
@@ -85,6 +85,24 @@
                     <div class="w-1/2 pl-20">{{ st1 }}</div>
                 </div>
 
+                <div class="flex text-list">
+                    <div class="w-1/2">0.25</div>
+                    <div class="w-1/2"><input type="tel" maxlength="4" v-model.lazy="v025" @change="updateSubTotal('025')" name="" id=""></div>
+                    <div class="w-1/2 pl-20">{{ st025 }}</div>
+                </div>
+
+                <div class="flex text-list">
+                    <div class="w-1/2">0.10</div>
+                    <div class="w-1/2"><input type="tel" maxlength="4" v-model.lazy="v010" @change="updateSubTotal('010')" name="" id=""></div>
+                    <div class="w-1/2 pl-20">{{ st010 }}</div>
+                </div>
+
+                <div class="flex text-list">
+                    <div class="w-1/2">0.05</div>
+                    <div class="w-1/2"><input type="tel" maxlength="4" v-model.lazy="v005" @change="updateSubTotal('005')" name="" id=""></div>
+                    <div class="w-1/2 pl-20">{{ st005 }}</div>
+                </div>
+
                 <div class="flex">
                     <div class="w-1/2"><h3>Total</h3></div>
                     <div class="w-1/2"></div>
@@ -93,7 +111,8 @@
             </div>
         </div>
         <div class="flex px-10">
-            <button class="btn px-3 py-1" @click="resetValues">Clear</button>
+            <button class="btn btn-default px-3 py-1" @click="resetValues">Clear</button>
+            <button class="btn btn-primary px-3 py-1 ml-5" @click="printCounts">Print</button>
         </div>
     </div>
 
