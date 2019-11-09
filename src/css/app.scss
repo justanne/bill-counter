@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #fefefe;
+    font-size: 1em;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+input {
+    color: #25293D;
+}
+input:focus,
+button:focus {
+    outline: 2px solid hsl(182, 74%, 49%);
+}
+.text-list,
+.text-list-header {
+    padding: 0.5em;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+
+    &:hover {
+        background: #abf4f7;
+    }
+}
+.text-list-header:hover {
+    background: none;
+}
+.text-list input {
+    width: 30%;
+    border: 1px solid #ddd;
+}
+button.btn-primary {
+    color: rgb(158, 42, 0);
+    background: orange;
+}
+button.btn-default {
+    color: #333;
+    background: #aaa;
+}
+
+@import "dark";
