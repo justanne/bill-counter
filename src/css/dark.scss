@@ -1,21 +1,28 @@
+@import 'variables';
+
 @media screen and (prefers-color-scheme: dark) {
     body {
-        color: #b5bde4;
-        background: #25293D;
+        color: $dark-text-color;
+        background: $dark-bg-color;
     }
     input {
-        color: #25293D;
-        border-color: #12141d;
+        color: $dark-input-text-color;
+        border: 2px solid $dark-border-color;
+    
+        &:focus {
+            outline: none;
+            border: 2px solid $dark-accent-color;
+        }
     }
     input:focus {
-        outline-color: #239adf;
+        outline-color: $dark-accent-color;
     }
     .text-list,
     .text-list-header {
-        border-color: #3b4161;
+        border-color: lighten($dark-border-color, 15%);
 
         &:hover {
-            background: #5a5f7a;
+            background: lighten($dark-bg-color, 3%);
         }
     }
     .text-list-header:hover {

@@ -8,11 +8,12 @@
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link type="text/css" href="dist/app.css" rel="stylesheet" >
+    <link type="text/css"href="dist/app.css" rel="stylesheet" media="screen">
+    <!-- <link type="text/css" href="dist/print.css" rel="stylesheet" media="print" > -->
 </head>
 <body>
     <div id="app">
-        <div class="flex flex-wrap px-10 py-5">
+        <div class="flex flex-wrap px-10 py-5 billname">
             <div class="flex w-full mr-5" v-if="!billname2">
                 <div class="w-1/4">Name</div>
                 <div class="w-1/4"><input class="w-full" type="text" v-model.trim="billname" maxlength="20" autofocus></div>
@@ -103,7 +104,7 @@
                     <div class="w-1/2 pl-20">{{ st005 }}</div>
                 </div>
 
-                <div class="flex">
+                <div class="flex mt-5">
                     <div class="w-1/2"><h3>Total</h3></div>
                     <div class="w-1/2"></div>
                     <div class="w-1/2 pl-20">{{ total }}</div>

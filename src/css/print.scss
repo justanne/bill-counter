@@ -1,3 +1,9 @@
+@import 'variables';
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family:
         -apple-system,
@@ -11,8 +17,12 @@ body {
         "Droid Sans",
         "Helvetica Neue",
         sans-serif;
-    font-size: 8pt;
+    font-size: 1em;
 }
+.billname {
+    display: none;
+}
+
 .text-list,
 .text-list-header {
     margin: 0;
@@ -24,10 +34,13 @@ body {
     width: 50%;
     display: table;
 }
-.text-list input {
+
+// -------------------------  Form
+input {
     border: none;
-    color: #eee;
 }
-button.btn {
-    display: none;
+
+// ------------------------- Typography
+h1 {
+    color: $print-text-color;
 }
