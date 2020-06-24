@@ -118,7 +118,6 @@
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script> -->
 <script type="text/javascript" src="dist/app.js"></script>
 </body>
 </html>
