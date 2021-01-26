@@ -1,0 +1,76 @@
+@import 'variables';
+
+html, body {
+    @apply m-0;
+    @apply p-0;
+}
+body {
+    @apply bg-white;
+    @apply text-sm;
+}
+
+// .text-list,
+// .text-list-header {
+//     padding: 0.5em;
+//     margin: 0;
+//     border-bottom: 1px solid #ccc;
+
+//     &:hover {
+//         background: #abf4f7;
+//     }
+// }
+// .text-list-header:hover {
+//     background: none;
+// }
+// .text-list input {
+//     width: 30%;
+//     border: 1px solid #ddd;
+// }
+// button.btn-primary {
+//     color: rgb(158, 42, 0);
+//     background: orange;
+// }
+// button.btn-default {
+//     color: #333;
+//     background: #aaa;
+// }
+
+.text-list,
+.text-list-header {
+    @apply my-2;
+}
+
+input[type='tel'],
+input[type='text'] {
+    @apply m-0;
+    @apply px-3;
+    @apply py-1;
+    @apply appearance-none;
+    @apply bg-gray-200;
+    @apply border-2;
+    @apply border-gray-200;
+    @apply rounded;
+    @apply text-gray-700;
+
+    @screen md {
+        @apply mx-2;
+    }
+
+    &:focus {
+        @apply outline-none;
+        @apply bg-white;
+        @apply border-orange-500;
+    }
+}
+
+.btn {
+    @apply bg-orange-500;
+    @apply text-white;
+    @apply px-3;
+    @apply py-1;
+    @apply rounded;
+    @apply border-2;
+    @apply border-orange-500;
+}
+
+// @import "dark";

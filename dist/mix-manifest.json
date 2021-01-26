@@ -1,5 +1,8 @@
 {
-    "/app.js": "/app.js",
-    "/app.css": "/app.css",
-    "/print.css": "/print.css"
+    "/app.js": "/app.js?id=fb49499ae5596450a119",
+    "/app.css": "/app.css?id=7a10a7de828eaf35180c",
+    "/print.css": "/print.css?id=935680118081d22e8af1",
+    "/app.js.map": "/app.js.map?id=ae26423e9b154b41af35",
+    "/app.css.map": "/app.css.map?id=450c7288a45c5efb724b",
+    "/print.css.map": "/print.css.map?id=9301d07e2bf13b9c9cd6"
 }

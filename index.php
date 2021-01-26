@@ -6,21 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bill Counter</title>
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link type="text/css"href="dist/app.css" rel="stylesheet" media="screen">
     <!-- <link type="text/css" href="dist/print.css" rel="stylesheet" media="print" > -->
 </head>
 <body>
     <div id="app">
         <div class="flex flex-wrap px-10 py-5 billname">
-            <div class="flex w-full mr-5" v-if="!billname2">
-                <div class="w-1/4">Name</div>
-                <div class="w-1/4"><input class="w-full" type="text" v-model.trim="billname" maxlength="20" autofocus></div>
-                <div class="w-1/4 ml-5"><button class="btn btn-default px-2" @click="addBillName">Set</button></div>
+            <div class="flex flex-wrap items-center w-full mr-5" v-if="!billname2">
+                <div class="w-full md:w-auto inline-block my-2">Name</div>
+                <div class="w-full md:w-auto inline-block my-2"><input class="w-full md:w-auto" type="text" v-model.trim="billname" maxlength="20" id="name" autofocus></div>
+                <div class="w-full md:w-auto inline-block my-2"><button class="btn" @click="addBillName">Set</button></div>
             </div>
             <div class="flex w-full">
-                <h1 class="text-xl text-white uppercase" v-text="billname2"></h1>
+                <div v-if="billname2">Counting for </div></div> <h1 class="text-xl text-black uppercase" v-text="billname2"></h1>
             </div>
         </div>
         <div class="flex p-10">
@@ -117,7 +115,6 @@
         </div>
     </div>
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script type="text/javascript" src="dist/app.js"></script>
 </body>
 </html>

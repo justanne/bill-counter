@@ -1,4 +1,6 @@
 let mix = require('laravel-mix');
+let tailwindcss = require('tailwindcss');
+
 
 /*
  |--------------------------------------------------------------------------
@@ -11,12 +13,29 @@ let mix = require('laravel-mix');
  |
  */
 
-// mix.js('src/app.js', 'dist/').sass('src/app.scss', 'dist/');
+mix.js('src/js/app.js', 'dist/')
+  .sass('src/css/app.scss', 'dist/')
+  .sass('src/css/print.scss', 'dist/')
+  .setPublicPath('dist/')
+  .options({
+    processCssUrls: false,
+    postCss: [tailwindcss('tailwind.config.js')],
+  })
+  .version()
+  .sourceMaps();
 
-mix.js('src/js/app.js', 'dist')
-    .sass('src/css/app.scss', 'dist')
-    .sass('src/css/print.scss', 'dist')
-    .setPublicPath('dist');
+if (!mix.inProduction()) {
+  mix.disableNotifications()
+      .browserSync({
+      notify: false,
+      open: 'external',
+      port: 8989,
+      https: true,
+      host: 'billcounter.proj',
+      proxy: 'billcounter.proj',
+      })
+      .sourceMaps();
+}
 
 // Full API
 // mix.js(src, output);
